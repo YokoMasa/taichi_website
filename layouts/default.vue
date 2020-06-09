@@ -1,13 +1,23 @@
 <template>
   <div>
-    <nuxt />
+    <main-header></main-header>
+    <nuxt style="margin-top: 80px;"/>
+    <main-footer></main-footer>
   </div>
 </template>
+<script>
+import MainHeader from '~/components/MainHeader'
+import MainFooter from '~/components/MainFooter'
 
+export default {
+  components: {
+    MainHeader, MainFooter
+  }
+}
+</script>
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -15,7 +25,13 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  color: #555;
 }
+a { text-decoration: none;}
+a:link { color: #555; }
+a:visited { color: #555; }
+a:hover { color: #555; }
+a:active { color: #555; }
 
 *,
 *:before,
@@ -51,5 +67,13 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+.content {
+  max-width: 1100px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
 }
 </style>
