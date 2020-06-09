@@ -91,7 +91,6 @@ export default {
     position: relative;
     width: 30%;
     height: 70%;
-    background: gray;
     
     &-image {
       width: 100%;
