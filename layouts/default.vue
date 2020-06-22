@@ -25,13 +25,13 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  color: #555;
+  color: #333;
 }
 a { text-decoration: none;}
-a:link { color: #555; }
-a:visited { color: #555; }
-a:hover { color: #555; }
-a:active { color: #555; }
+a:link { color: #333; }
+a:visited { color: #333; }
+a:hover { color: #333; }
+a:active { color: #333; }
 
 *,
 *:before,

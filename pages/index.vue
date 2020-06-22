@@ -2,26 +2,32 @@
   <div>
     <section class="hero">
       <div class="content hero-inner">
-        <img class="hero-image" src="~/assets/placeholder.jpg">
-        <a class="hero-nav" href="#">
-          <div class="hero-nav-inner">読書会はこちら</div>
-        </a>
+        <img class="hero-image" src="~/assets/hero.jpg">
+        <div class="hero-overlay">
+          <div class="hero-overlay-inner">
+            <div class="hero-overlay-about">
+            偶然のご縁がつながって、素敵な人生になったら素晴らしい。<br><br>
+そんなことを目指しながら、読書会、ヨガ会、コーチング、コミュニティ作りをしています。<br><br>
+自分自身が誰かのワクワクの象徴になれるように。
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="menu">
       <div class="content menu-inner">
         <a class="menu-item" href="#">
-          <img class="menu-item-image" src="~/assets/placeholder.jpg">
-          <div class="overlay">ABOUT</div>
-        </a>
-        <a class="menu-item" href="#">
-          <img class="menu-item-image" src="~/assets/placeholder.jpg">
+          <img class="menu-item-image" src="~/assets/profile.jpg">
           <div class="overlay">PROFILE</div>
         </a>
         <a class="menu-item" href="#">
-          <img class="menu-item-image" src="~/assets/placeholder.jpg">
+          <img class="menu-item-image" src="~/assets/read.jpg">
           <div class="overlay">読書会</div>
+        </a>
+        <a class="menu-item" href="#">
+          <img class="menu-item-image" src="~/assets/about.jpg">
+          <div class="overlay">YOGA</div>
         </a>
       </div>
     </section>
@@ -48,34 +54,37 @@ export default {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 30px;
+    border-radius: 20px;
   }
 
-  &-nav {
+  &-overlay {
     position: absolute;
-    bottom: 50px;
-    left: 50px;
-    display: inline-block;
-    width: 300px;
-    height: 50px;
-    background: rgba($color: white, $alpha: 0.5);
-    border-radius: 30px;
-    transition: background 0.2s;
+    padding: inherit;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
     &-inner {
       width: 100%;
       height: 100%;
+      background: rgba(white, 0.4);
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 10pt;
-      font-weight: 600;
+      border-radius: 20px;
+    }
+
+    &-about {
+      width: 600px;
+      text-align: center;
+      font-size: 13pt;
+      color: #333;
+      word-break: break-all;
     }
   }
-
-  &-nav:hover {
-    background: rgba($color: white, $alpha: 0.7);
-  }
+  
 }
 
 .menu {
@@ -96,30 +105,29 @@ export default {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 30px;
+      border-radius: 20px;
     }
 
     .overlay {
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      background: rgba($color: black, $alpha: 0.3);
+      height: 20%;
+      background: rgba(white, 0.7);
       display: flex;
       justify-content: center;
       align-items: center;
-      color: white;
-      font-size: 19pt;
-      font-weight: 500;
-      border-radius: 30px;
-      opacity: 0;
+      letter-spacing: 0.2em;
+      font-size: 15pt;
+      border-radius: 0 0 20px 20px;
+      opacity: 1;
       transition: all 0.3s;
     }
   }
 
   &-item:hover .overlay {
-    opacity: 1;
+    opacity: 0.7;
   }
 }
 

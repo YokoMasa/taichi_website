@@ -3,15 +3,13 @@
       <div class="header-inner">
 
           <div class="header-logo">
-              <span class="header-logo-text">logo</span>
+              <span class="header-logo-text">Taichi Shibuki</span>
           </div>
 
           <div class="header-menuWrapper">
-              <a href="#" class="header-menu">エコラボ</a>
+              <a href="#" class="header-menu">YOGA</a>
               <a href="#" class="header-menu">読書会</a>
-              <a href="#" class="header-menu">WORKS</a>
-              <a href="#" class="header-menu">PROFILE</a>
-              <a href="#" class="header-menu">ABOUT</a>
+              <nuxt-link to="/profile" class="header-menu">PROFILE</nuxt-link>
           </div>
 
       </div>
@@ -30,7 +28,7 @@ export default {
     width: 100%;
     height: 80px;
     background: white;
-    z-index: 1;
+    z-index: 5;
 
     &-inner {
         max-width: 1100px;
@@ -42,14 +40,14 @@ export default {
 
     &-logo {
         position: absolute;
-        width: 200px;
+        width: 300px;
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
 
         &-text {
-            font-size: 23pt;
+            font-size: 20pt;
             font-weight: 700;
         }
     }
